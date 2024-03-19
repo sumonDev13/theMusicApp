@@ -4,7 +4,7 @@
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 # How to run the App?
-1.download the project as Zip.<br />
+1.Download the project as Zip.<br />
 2.Extract the zip file.<br />
 3.Open the "The Music App" Folder with any Code editor.<br />
 4.Open Terminal and go to client folder( $ cd client).<br />
