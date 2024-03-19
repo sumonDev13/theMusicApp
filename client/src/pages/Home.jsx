@@ -1,10 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Error, Loader, SongCard } from '../components';
-import { genres } from '../assets/constants';
 import { useGetTopChartsQuery } from '../redux/services/shazamCore'; 
 
 
-const Discover = () => {
+const Home = () => {
    
     const { activeSong, isPlaying } = useSelector((state) => state.player)
 
@@ -15,27 +14,12 @@ const Discover = () => {
     if (error) return <Error />;
   
 
-    const genreTitle = "Pop";
     return(
         <div className={styles.container}>
             <div className={styles.wrapper}>
                 <h2 className='font-bold text-3xl text-white text-left'>
-                    Discover {genreTitle}
+                    Top Songs 
                 </h2>
-                <select
-                  onChange={() => {}}
-                  value=""
-                  className={styles.selectStyles}
-                >
-                    {genres.map((genre) => 
-                        <option
-                          key={genre.value}
-                          value={genre.value}
-                        >
-                          {genre.title}
-                        </option>
-                    )}
-                </select>
             </div>
 
             <div className='flex flex-wrap sm:justify-start justify-center gap-8'>
@@ -55,7 +39,7 @@ const Discover = () => {
     )
 }
 
-export default Discover;
+export default Home;
 
 const styles ={
     container:`flex flex-col`,
